@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Character encoding -->
+    <meta charset="UTF-8">
+
+    <!-- Responsive design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO -->
+    <meta name="description" content="A semantic HTML5 webpage demonstrating structure, accessibility, and modern web standards.">
+    <meta name="keywords" content="HTML5, semantic HTML, accessibility, web development">
+    <meta name="author" content="Your Name">
+
+    <!-- Page title -->
+    <title>HTML5 Structure & Semantics</title>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>HTML5 Structure & Semantics</h1>
+        <p>Learning the foundations of modern web development.</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav aria-label="Main Navigation">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#topics">Topics</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main content -->
+    <main id="home">
+
+        <!-- Article -->
+        <article>
+            <header>
+                <h2>Understanding HTML5</h2>
+                <p>Published on September 3, 2026</p>
+            </header>
+
+            <p>
+                HTML5 provides the structure of modern websites.
+                Semantic HTML makes web pages easier to understand
+                for browsers, search engines, and assistive technologies.
+            </p>
+
+            <!-- Section -->
+            <section id="about" aria-labelledby="about-heading">
+                <h3 id="about-heading">What is Semantic HTML?</h3>
+
+                <p>
+                    Semantic HTML uses meaningful elements such as
+                    header, nav, main, article, section, aside, and footer
+                    instead of relying only on generic div elements.
+                </p>
+            </section>
+
+            <!-- Another section -->
+            <section id="topics" aria-labelledby="topics-heading">
+                <h3 id="topics-heading">Important HTML5 Elements</h3>
+
+                <ul>
+                    <li><strong>header</strong> - Introductory content for a page or section.</li>
+                    <li><strong>nav</strong> - Contains navigation links.</li>
+                    <li><strong>main</strong> - Contains the primary content of the page.</li>
+                    <li><strong>article</strong> - Represents independent, reusable content.</li>
+                    <li><strong>section</strong> - Groups related content.</li>
+                    <li><strong>aside</strong> - Contains related or secondary content.</li>
+                    <li><strong>footer</strong> - Contains footer information.</li>
+                </ul>
+            </section>
+
+            <!-- Accessibility section -->
+            <section aria-labelledby="accessibility-heading">
+                <h3 id="accessibility-heading">Web Accessibility</h3>
+
+                <p>
+                    Accessible websites allow people with different abilities
+                    to use and understand web content.
+                </p>
+
+                <button
+                    type="button"
+                    aria-label="Learn more about HTML5 accessibility">
+                    Learn More
+                </button>
+            </section>
+
+        </article>
+
+        <!-- Aside -->
+        <aside aria-labelledby="resources-heading">
+            <h2 id="resources-heading">Quick Resources</h2>
+
+            <p>
+                Use semantic HTML whenever an appropriate semantic element
+                exists instead of using a generic div.
+            </p>
+
+            <ul>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" rel="noopener noreferrer">MDN HTML</a></li>
+                <li><a href="https://validator.w3.org/" target="_blank" rel="noopener noreferrer">W3C Validator</a></li>
+            </ul>
+        </aside>
+
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <p>&copy; 2026 HTML5 Learning Project</p>
+        <p>Created as part of Week 1 - Day 1.</p>
+    </footer>
+
+</body>
+</html>
