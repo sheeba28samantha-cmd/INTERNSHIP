@@ -1,0 +1,390 @@
+css
+/* ==============================
+   CSS CUSTOM PROPERTIES
+   ============================== */
+
+:root {
+    --background-color: #f4f6f8;
+    --text-color: #222222;
+    --card-color: #ffffff;
+    --primary-color: #4f46e5;
+    --secondary-color: #6366f1;
+    --nav-color: #ffffff;
+    --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Dark Theme */
+
+.dark-theme {
+    --background-color: #18181b;
+    --text-color: #f4f4f5;
+    --card-color: #27272a;
+    --primary-color: #818cf8;
+    --secondary-color: #6366f1;
+    --nav-color: #27272a;
+    --shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+
+/* ==============================
+   BASIC STYLES
+   ============================== */
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+
+/* ==============================
+   STICKY NAVIGATION
+   ============================== */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 15px 30px;
+
+    background-color: var(--nav-color);
+    box-shadow: var(--shadow);
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+#themeButton {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+
+    background-color: var(--primary-color);
+    color: white;
+
+    cursor: pointer;
+}
+
+#themeButton:hover {
+    background-color: var(--secondary-color);
+}
+
+
+/* ==============================
+   HERO SECTION
+   ============================== */
+
+.hero {
+    min-height: 90vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    padding: 40px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    max-width: 700px;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+
+/* Button */
+
+.button {
+    display: inline-block;
+
+    padding: 12px 25px;
+
+    background-color: var(--primary-color);
+    color: white;
+
+    text-decoration: none;
+    border-radius: 6px;
+
+    transition: transform 0.3s ease;
+}
+
+.button:hover {
+    transform: translateY(-4px);
+}
+
+
+/* ==============================
+   SECTIONS
+   ============================== */
+
+.section {
+    min-height: 500px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 50px 20px;
+
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+
+/* ==============================
+   LOADING SPINNER
+   ============================== */
+
+.spinner {
+    width: 70px;
+    height: 70px;
+
+    border: 8px solid #ddd;
+    border-top: 8px solid var(--primary-color);
+
+    border-radius: 50%;
+
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* ==============================
+   PROGRESS BAR
+   ============================== */
+
+.progress-container {
+    width: 80%;
+    max-width: 600px;
+
+    height: 30px;
+
+    background-color: #ddd;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0%;
+
+    background-color: var(--primary-color);
+
+    border-radius: 20px;
+
+    animation: progressAnimation 3s ease forwards;
+}
+
+@keyframes progressAnimation {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 80%;
+    }
+}
+
+
+/* ==============================
+   PSEUDO-ELEMENTS
+   ============================== */
+
+.decorated-text {
+    position: relative;
+
+    margin-top: 40px;
+    padding: 20px;
+
+    font-size: 18px;
+}
+
+.decorated-text::before {
+    content: "★";
+
+    position: absolute;
+    left: -30px;
+    top: 15px;
+
+    color: var(--primary-color);
+}
+
+.decorated-text::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 3px;
+
+    background-color: var(--primary-color);
+}
+
+
+/* ==============================
+   CARDS
+   ============================== */
+
+.cards {
+    display: flex;
+    flex-direction: row;
+
+    gap: 25px;
+
+    min-height: 400px;
+}
+
+.card {
+    position: relative;
+
+    width: 280px;
+    min-height: 200px;
+
+    padding: 30px;
+
+    background-color: var(--card-color);
+
+    border-radius: 12px;
+
+    box-shadow: var(--shadow);
+
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+
+/* Pseudo-element on cards */
+
+.card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 5px;
+
+    background-color: var(--primary-color);
+
+    border-radius: 12px 12px 0 0;
+}
+
+.card h3 {
+    margin-bottom: 15px;
+
+    color: var(--primary-color);
+}
+
+.card p {
+    line-height: 1.6;
+}
+
+
+/* ==============================
+   FOOTER
+   ============================== */
+
+footer {
+    padding: 25px;
+
+    text-align: center;
+
+    background-color: var(--card-color);
+}
+
+
+/* ==============================
+   RESPONSIVE DESIGN
+   ============================== */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero h1 {
+        font-size: 35px;
+    }
+
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+        max-width: 350px;
+    }
+}
