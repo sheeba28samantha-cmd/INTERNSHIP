@@ -1,0 +1,104 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Advanced - Day 1</title>
+    <link rel="stylesheet" href="advanced_styles.css">
+</head>
+
+<body>
+
+    <!-- Sticky Navigation -->
+    <nav class="navbar">
+        <div class="logo">CSS Advanced</div>
+
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#animations">Animations</a>
+            <a href="#progress">Progress</a>
+        </div>
+
+        <button id="themeButton">🌙 Toggle Theme</button>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="hero">
+        <h1>Advanced CSS Techniques</h1>
+        <p>
+            Custom Properties, Animations, Pseudo-elements,
+            Smooth Scrolling and Sticky Navigation
+        </p>
+
+        <a href="#animations" class="button">Explore</a>
+    </section>
+
+    <!-- Animation Section -->
+    <section id="animations" class="section">
+        <h2>CSS Loading Spinner</h2>
+
+        <div class="spinner"></div>
+
+        <p class="decorated-text">
+            This section uses CSS animations and pseudo-elements.
+        </p>
+    </section>
+
+    <!-- Progress Section -->
+    <section id="progress" class="section">
+        <h2>Animated Progress Bar</h2>
+
+        <div class="progress-container">
+            <div class="progress-bar"></div>
+        </div>
+
+        <p>Loading Progress: 80%</p>
+    </section>
+
+    <!-- Feature Cards -->
+    <section class="section cards">
+        <div class="card">
+            <h3>CSS Variables</h3>
+            <p>
+                CSS custom properties make it easy to manage
+                colors and other reusable values.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Animations</h3>
+            <p>
+                CSS animations create smooth movement without JavaScript.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Pseudo-elements</h3>
+            <p>
+                ::before and ::after add decorative elements to the page.
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <p>Week 2 - Day 1 | CSS Advanced</p>
+    </footer>
+
+    <script>
+        const themeButton = document.getElementById("themeButton");
+
+        themeButton.addEventListener("click", function () {
+            document.body.classList.toggle("dark-theme");
+
+            if (document.body.classList.contains("dark-theme")) {
+                themeButton.textContent = "☀️ Light Theme";
+            } else {
+                themeButton.textContent = "🌙 Dark Theme";
+            }
+        });
+    </script>
+
+</body>
+</html>
+```
