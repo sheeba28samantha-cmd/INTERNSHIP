@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #74ebd5, #9face6);
+    padding: 20px;
+}
+
+.weather-container {
+    width: 100%;
+    max-width: 500px;
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    margin-bottom: 25px;
+}
+
+.search-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+#cityInput {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+#searchButton {
+    padding: 12px 18px;
+    border: none;
+    border-radius: 8px;
+    background: #4f46e5;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#searchButton:hover {
+    background: #3730a3;
+}
+
+.weather-result {
+    padding: 20px;
+}
+
+#cityName {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+#temperature {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#description {
+    font-size: 20px;
+    margin-bottom: 15px;
+    text-transform: capitalize;
+}
+
+#humidity,
+#wind {
+    margin: 8px;
+    font-size: 16px;
+}
+
+#errorMessage {
+    color: red;
+    margin-top: 15px;
+}
+
+/* Mobile responsive design */
+@media (max-width: 600px) {
+
+    .weather-container {
+        padding: 20px;
+    }
+
+    .search-box {
+        flex-direction: column;
+    }
+
+    #searchButton {
+        width: 100%;
+    }
+
+    #cityName {
+        font-size: 24px;
+    }
+
+    #temperature {
+        font-size: 34px;
+    }
+}
